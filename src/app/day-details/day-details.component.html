@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col">
+      <form (ngSubmit)="addRecord()" [formGroup]="recordForm" novalidate>
+        <div class="form-row">
+          <div class="col-5">
+            <input type="number" class="form-control" formControlName="income" placeholder="Income">
+          </div>
+          <div class="col-5">
+            <input type="number" class="form-control" formControlName="outcome" placeholder="Outcome">
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-block add-record-btn">
+              Add record
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col">
+      <app-income-outcome-list (deleteRecord)="deleteRecord($event)" [records]="records"></app-income-outcome-list>
+    </div>
+  </div>
+</div>

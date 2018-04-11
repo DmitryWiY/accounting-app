@@ -1,0 +1,26 @@
+<div>
+  <table class="table table-bordered">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Income</th>
+      <th scope="col">Outcome</th>
+      <th scope="col">Pure</th>
+      <th scope="col">Tax</th>
+      <th scope="col">-</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let record of records index as i">
+      <th scope="row">{{i}}</th>
+      <td>{{record.income}}</td>
+      <td>{{record.outcome}}</td>
+      <td>{{record.pureIncome}}</td>
+      <td>{{record.taxes}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteRow(record.guid)">delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

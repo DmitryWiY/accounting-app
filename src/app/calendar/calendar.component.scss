@@ -1,0 +1,51 @@
+
+.calendar {
+  min-height: 80vh;
+}
+
+.calendar-day {
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid rgba(121, 134, 203, .2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  &:hover {
+    background-color: rgba(200, 200, 200, .1);
+  }
+  &.filled {
+    background-color: rgba(121, 134, 203, 1);
+    color:white;
+    border: 1px solid rgba(255, 255, 255, .6);
+
+    &:hover {
+      background-color: rgba(121, 134, 203, .5);
+    }
+  }
+
+  .stats-text {
+    font-size: 14px;
+    margin: 5px;
+  }
+
+}
+
+.right-side{
+  position:relative;
+
+  .export-to-csv-btn{
+    padding:4px;
+    font-size: 12px;
+  }
+}
+.calendar-controls{
+  margin-top:100px;
+
+  .calendar-control-btn{
+    background-color: rgba(121, 134, 203, 1);
+    color:white;
+  }
+}
+
+
